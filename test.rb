@@ -1,8 +1,8 @@
 require 'fileutils'
 include FileUtils
 
-x = pwd()
 
-puts x
+y = system('ls')
+#puts `ls`
+`mkdir`("hello")
 
-puts value = %x( pwd )
