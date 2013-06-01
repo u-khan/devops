@@ -1,0 +1,21 @@
+umar's files
+
+
+
+werew
+
+define('AUTH_KEY',         'lwiAo#');
+define('SECURE_AUTH_KEY',  '2}nn%SwC4e');
+define('LOGGED_IN_KEY',    'w$yN0R6{9]z');
+define('NONCE_KEY',        'KP@D;');
+define('AUTH_SALT',        '83u+yzSm2k$');
+define('SECURE_AUTH_SALT', 'B![!$_Pf&>yG$i30R');
+define('LOGGED_IN_SALT',   'R#');
+define('NONCE_SALT',       '=o0I`GV<4>$dfgQ/v8pqHBxjen');
+
+
+
+
+herere
+
+
