@@ -26,6 +26,10 @@ system ( "apt-get -y install php5 libapache2-mod-php5 php5-mysql" )
 # Restart Apache
 system ( "/etc/init.d/apache2 restart" )
 
+# Install MySQL development headers and 'mysql2' ruby gem
+system ( "apt-get install libmysqlclient-dev")
+system ( "gem install mysql2" )
+
 # Install phpMyAdmin (skipped for now)
 # system ( "sudo apt-get -y install phpmyadmin" )
 
