@@ -1,6 +1,7 @@
-require 'mysql2'
 
 def create_db_and_user(db_root_pass, db_name, db_user, db_u_pass)
+  require 'mysql2'
+  
   @db_host = "localhost"
   @db_user = "root"
   @db_pass = db_root_pass
