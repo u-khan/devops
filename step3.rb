@@ -28,7 +28,7 @@ require 'tempfile'
 require 'fileutils'
 
 # Specifies path to wp-config.php
-path = '/home/umar/wordpress/wp-config.php'
+path = '~/wordpress/wp-config.php'
 temp_file = Tempfile.new('foo')
 begin
   File.open(path, 'r') do |file|
