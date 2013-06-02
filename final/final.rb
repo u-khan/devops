@@ -24,11 +24,22 @@ def main
   puts "Enter a folder name for the wordpress site:"
   site_name = gets.chomp()
   
+  # Install LAMP using lamp.rb
   install_lamp(mysql_root_pass)
+  
+  # Download and extract wordpress using step1.rb
   download_wordpress()
+  
+  # Create database and new user using step2.rb
   create_db_and_user(mysql_root_pass, new_db_name, new_db_user, newuser_pass)
+  
+  # Edit wp-config.php using step3.rb
   edit_wp_config(new_db_name, new_db_user, newuser_pass)
+  
+  # Rename and move wordpress folder to /var/www/<site_name> directory using step4.rb
   rename_and_move_wordpress(site_name)
+  
+  # Launch browser with wordpress configuration URL using step5.rb
   launch_browser(site_name)
   
 end
