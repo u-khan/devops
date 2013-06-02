@@ -1,6 +1,5 @@
 # exec command doesn't work because only 1 command is executed.
-
-#exec("mkdir umar")
+# exec("mkdir umar")
 
 # Run with 'rvmsudo ruby text.rb'
 
@@ -26,7 +25,7 @@ system ( "apt-get -y install php5 libapache2-mod-php5 php5-mysql" )
 # Restart Apache
 system ( "/etc/init.d/apache2 restart" )
 
-# Install MySQL development headers and 'mysql2' ruby gem
+# Install MySQL development headers and 'mysql2' ruby gem (needed for ruby->mysql interaction)
 system ( "apt-get install libmysqlclient-dev")
 system ( "gem install mysql2" )
 
