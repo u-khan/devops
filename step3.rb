@@ -23,12 +23,51 @@ secret_keys.each_line { |line|
   secret_array << line
 }
 
+path = '/home/umar/wordpress/wp-config.php'
+lines = IO.readlines(path).map do |line|
+  key = line.split(",")[0]
+  
+  # Replaces line by line. Would be better if could do block text paste
+  case key
+  when "define('DB_NAME'"
+    "define('DB_NAME', '#{db_name}');"
+  when "define('DB_USER'"
+    "define('DB_USER', '#{db_user}');"
+  when "define('DB_PASSWORD'"
+    "define('DB_PASSWORD', '#{db_password}');"
+  when "define('AUTH_KEY'"
+    secret_array[0]
+  when "define('SECURE_AUTH_KEY'"
+    secret_array[1]
+  when "define('LOGGED_IN_KEY'"
+    secret_array[2]
+  when "define('NONCE_KEY'"
+    secret_array[3]
+  when "define('AUTH_SALT'"
+    secret_array[4]
+  when "define('SECURE_AUTH_SALT'"
+    secret_array[5]
+  when "define('LOGGED_IN_SALT'"
+    secret_array[6]
+  when "define('NONCE_SALT'"
+    secret_array[7]
+  else
+    line
+  end
+end
+File.open(path, 'w') do |file|
+  file.puts lines
+end
+
+
+=begin
+### Doesnt work for now even though output file looks correct
 # Edits wp-config.php with the new secret keys
 require 'tempfile'
 require 'fileutils'
 
 # Specifies path to wp-config.php
-path = ENV['HOME']+'/wordpress/wp-config.php'
+path = '/home/umar/wordpress/wp-config.php'
 temp_file = Tempfile.new('foo')
 begin
   File.open(path, 'r') do |file|
@@ -71,6 +110,7 @@ ensure
   temp_file.close
   temp_file.unlink
 end
+=end
 
 
 
