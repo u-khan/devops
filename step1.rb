@@ -2,5 +2,9 @@
 
 # Download wordpress tar to home directory and extract
 system ( "wget -P ~/ http://wordpress.org/latest.tar.gz" )
-system ( "tar -xzvf ~/latest.tar.gz" )
+system ( "tar -xzvf ~/latest.tar.gz -C ~/" )
+
+# Delete the .tar downloaded file
+# system ( "rm ~/latest.tar.gz" )
+
 
