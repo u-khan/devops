@@ -26,8 +26,8 @@ system ( "apt-get -y install php5 libapache2-mod-php5 php5-mysql" )
 # Restart Apache
 system ( "/etc/init.d/apache2 restart" )
 
-# Install phpMyAdmin
-system ( "sudo apt-get -y install phpmyadmin" )
+# Install phpMyAdmin (skipped for now)
+# system ( "sudo apt-get -y install phpmyadmin" )
 
 puts "LAMP Installed"
   
