@@ -13,8 +13,6 @@ system ( "apt-get update" )
 system ( "apt-get -y upgrade" )
   
 # Install MySQL
-
-
 system ( "echo mysql-server mysql-server/root_password password #{mysql_root_pass} | sudo debconf-set-selections" )
 system ( "echo mysql-server mysql-server/root_password_again password #{mysql_root_pass} | sudo debconf-set-selections" )
 system ( "apt-get -y install mysql-server mysql-client" )
