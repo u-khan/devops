@@ -5,4 +5,4 @@ puts "Enter name of blog"
 blog_name = gets.chomp()
 
 system ( "mv ~/wordpress ~/#{blog_name}" )
-system ( "mv ~/blog /var/www/" )
+system ( "mv ~/#{blog_name} /var/www/" )
