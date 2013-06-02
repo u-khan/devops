@@ -60,8 +60,8 @@ File.open(path, 'w') do |file|
 end
 
 
+# Block below was first attempt. Doesn't seem to work even though output file looks correct.
 =begin
-### Doesnt work for now even though output file looks correct
 # Edits wp-config.php with the new secret keys
 require 'tempfile'
 require 'fileutils'
