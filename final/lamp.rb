@@ -4,9 +4,6 @@
 # Run with 'rvmsudo ruby text.rb'
 
 def install_lamp(mysql_root_pass)
-  puts "Hi!"
-  puts "Enter password for MySQL servers 'root' user"
-  mysql_root_pass = gets.chomp()
 
   # Update repository
   system ( "apt-get update" )
