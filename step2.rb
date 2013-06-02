@@ -12,7 +12,7 @@ puts "Enter new user password"
 @db_new_pass = gets.chomp()
 
 client = Mysql2::Client.new(:host => @db_host, :username => @db_user, :password => @db_pass)
-client.query( "CREATE DATABASE #{@db_name}" )
+client.query( "CREATE DATABASE #{@db_name};" )
 client.query( "GRANT ALL PRIVILEGES ON #{@db_name}.* TO \"#{@db_new_user}\"@\"#{@db_host}\" IDENTIFIED BY \"#{@db_new_pass}\";" )
 client.query ( "FLUSH PRIVILEGES;" )
 client.close
