@@ -1,4 +1,6 @@
-#Launches default browser to 'http://localhost/<blogname>/wp-admin/install.php
+#Launches default browser to 'http://localhost/<blogname>/wp-admin/install.php'
 
-system ( "xdg-open http://www.google.com" )
+puts "What was your site name from step4?"
+name = gets.chomp()
+system ( "xdg-open http://localhost/#{name}/wp-admin/install.php" )
 
