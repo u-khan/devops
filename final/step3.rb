@@ -18,7 +18,7 @@ def edit_wp_config(db_name, db_user, db_password)
     secret_array << line
   }
 
-  path = '/home/umar/wordpress/wp-config.php'
+  path = ENV['HOME']+'/wordpress/wp-config.php'
   lines = IO.readlines(path).map do |line|
     key = line.split(",")[0]
     
